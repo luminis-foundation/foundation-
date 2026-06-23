@@ -13,7 +13,7 @@
 |---|---|---|---|---|
 | 1 | **Founder single point of failure** | High | Critical | Governance / Operations |
 | 2 | **501(c)(3) application denial or delay** | Medium | High | Legal / Compliance |
-| 3 | **Banking not established** | High | High | Finance / Operations |
+| 3 | **Banking pending / needs board-authorized completion** | High | High | Finance / Operations |
 | 4 | **Scientific overclaiming** | Medium | High | Public Communications / Legal |
 | 5 | **No field calibration or data quality protocol** | High | High | Research / Data |
 | 6 | **Pi server exposed to internet accidentally** | Low | Critical | Security |
@@ -27,7 +27,7 @@
 ## 1. Legal / Compliance Risk
 
 **Description:**
-The Foundation is a new legal entity (formed March 16, 2026) with several compliance obligations not yet completed: NM-COROS charitable registration, banking establishment, annual reporting to NM SOS, and future IRS 990 filings. The 501(c)(3) application (Form 1023-EZ) is pending. Any grant or donation received before banking is established cannot be processed.
+The Foundation is a new legal entity (formed March 16, 2026) with several compliance obligations not yet completed: NM-COROS charitable registration, banking (pending / needs board-authorized completion), annual reporting to NM SOS, and future IRS 990 filings. The 501(c)(3) application (Form 1023-EZ) is pending. Any grant or donation received before banking is established cannot be processed.
 
 | Attribute | Value |
 |---|---|
@@ -35,9 +35,9 @@ The Foundation is a new legal entity (formed March 16, 2026) with several compli
 | Impact | High (compliance failure, funder rejection, IRS jeopardy) |
 | Current controls | Form 1023-EZ filed; NM SOS Initial Report filed; NM Entity in good standing |
 | Missing controls | Banking; NM-COROS registration; financial controls policy; board minutes |
-| Mitigation | Establish banking immediately; file NM-COROS after IRS determination; document all compliance deadlines |
+| Mitigation | Initiate board-authorized banking process immediately; file NM-COROS after IRS determination; document all compliance deadlines |
 | Owner | Carlos Garcia, Adam Kimble |
-| Next action | Establish bank account; create compliance calendar with all annual deadlines |
+| Next action | Initiate bank account (pending / needs board-authorized completion); create compliance calendar with all annual deadlines |
 
 ---
 
@@ -105,28 +105,29 @@ Carlos Garcia is simultaneously President, Founder, Research Director, primary t
 | Missing controls | Technical documentation sufficient for handoff; research protocol documentation; key contacts list; credential escrow |
 | Mitigation | Document all passwords and credentials in a secure escrow (not a public repo); create a Foundation operations manual; ensure at least one other board member has access to all accounts |
 | Owner | Carlos Garcia + Board |
-| Next action | Create a private "Foundation Operations & Credentials" document accessible to Board; ensure Adam Kimble has access to banking |
+| Next action | Create a private "Foundation Operations & Credentials" document accessible to Board; ensure Adam Kimble has access to banking once established |
 
 ---
 
 ## 6. Scientific Overclaiming Risk
 
 **Description:**
-Several existing public documents risk creating false impressions about the Foundation's research maturity:
-- `luminis-foundation-open` README: "Field deployment (Pecos watershed) — ✅ Building" implies active field deployment when only bench testing is complete.
-- `luminis-foundation-open` README: "organized under IRC §501(c)(3)" could be read as confirmed tax-exempt status.
+Several existing public documents risk creating false impressions about the Foundation's research maturity or organizational status:
+- `luminis-foundation-open` README: "Field deployment (Pecos watershed) — ✅ Building" implies active field deployment when only bench testing is complete and on-site prototype is planned.
+- `luminis-foundation-open` README: "organized under IRC §501(c)(3)" could be read as confirmed tax-exempt status when the application is pending.
 - The Vercel demo could be mistaken for real sensor data if disclaimers are missed.
 - The preprint on Zenodo is a synthesis/theoretical paper, not an empirical field study — this distinction matters to scientific funders.
+- Website (index.html) lists the VP as "Sterling VanKuijk" — the confirmed legal name is "VanKaujk" (founder-confirmed). A named person listed with an incorrect surname in public materials creates credibility issues with funders and legal reviewers conducting due diligence.
 
 | Attribute | Value |
 |---|---|
-| Likelihood | Medium (language exists in public repos) |
+| Likelihood | Medium (language exists in public repos; website error is live) |
 | Impact | High (IRS scrutiny, funder loss of trust, reputational damage, potential misrepresentation) |
-| Current controls | Website uses accurate language; MycoSense README correctly labels demo as simulated; FIELD_STATUS.md is accurate |
-| Missing controls | Consistent language across all public repos; no single source of truth for approved status claims |
-| Mitigation | Audit all public repos for status claims; align luminis-foundation-open README with actual deployment status; use this document as the approved status reference |
+| Current controls | Website uses accurate 501(c)(3) language; MycoSense README correctly labels demo as simulated; FIELD_STATUS.md is accurate |
+| Missing controls | Consistent language across all public repos; VP surname corrected in website source; no single source of truth for approved status claims |
+| Mitigation | Audit all public repos for status claims; align luminis-foundation-open README; fix VP surname in index.html (PR to luminis-foundation.github.io); use knowledge-graph/foundation-map.md as the approved status reference |
 | Owner | Carlos Garcia |
-| Next action | Update `luminis-foundation-open` README field deployment status from "✅ Building" to "🔄 In development — bench-tested; on-site prototype planned"; fix 501(c)(3) language to "applied for" |
+| Next action | (P0) Fix index.html VP surname; (P1) Update luminis-foundation-open README field deployment status and 501(c)(3) language |
 
 ---
 
@@ -197,26 +198,26 @@ The Foundation has one pending grant ($1,000 microgrant) and no other funding pi
 | Impact | High (operations stall; research halted; personnel can't be compensated) |
 | Current controls | Operations currently run on founder's time; low overhead |
 | Missing controls | Operating budget; banking; grant strategy; donor cultivation; 501(c)(3) determination |
-| Mitigation | Establish banking immediately; await 501(c)(3) determination; develop a 12-month grant pipeline targeting environmental/tech foundations; document operating expenses |
+| Mitigation | Initiate banking immediately (pending / needs board-authorized completion); await 501(c)(3) determination; develop a 12-month grant pipeline targeting environmental/tech foundations; document operating expenses |
 | Owner | Adam Kimble, Carlos Garcia |
-| Next action | Establish bank account; draft 12-month operating budget; identify 5 grant opportunities for next cycle |
+| Next action | Initiate bank account; draft 12-month operating budget; identify 5 grant opportunities for next cycle |
 
 ---
 
 ## 11. Public Communications Risk
 
 **Description:**
-Inconsistent or inaccurate public statements about the Foundation's status — 501(c)(3) approval, field deployment completeness, data validity, or research maturity — carry reputational and legal risk. Public statements appear across a website, 4 GitHub repos, a published preprint, and AI-generated content.
+Inconsistent or inaccurate public statements about the Foundation's status — 501(c)(3) approval, field deployment completeness, data validity, or research maturity — carry reputational and legal risk. Public statements appear across a website, 4 GitHub repos, a published preprint, and AI-generated content. A specific confirmed P0 error: the Foundation website source (index.html) lists the VP's surname as "VanKuijk" while the correct legal name is "VanKaujk" (founder-confirmed). This error is live and public; a funder or legal reviewer performing due diligence will find it.
 
 | Attribute | Value |
 |---|---|
-| Likelihood | Medium (inconsistency already detected in luminis-foundation-open README) |
+| Likelihood | Medium (inconsistency already detected in luminis-foundation-open README and website source) |
 | Impact | High (IRS scrutiny; funder distrust; reputational damage) |
 | Current controls | Website and MycoSense README use accurate language; FIELD_STATUS.md is authoritative |
-| Missing controls | Consistent language policy across all repos; single approved status statement |
-| Mitigation | Adopt a "Public Status Language Standard" (see operations/next-actions.md); audit all repos before each grant submission |
+| Missing controls | VP surname corrected in index.html; consistent language policy across all repos; single approved status statement |
+| Mitigation | (P0) Fix VP surname in index.html via PR to luminis-foundation.github.io; adopt a "Public Status Language Standard"; audit all repos before each grant submission |
 | Owner | Carlos Garcia |
-| Next action | Fix luminis-foundation-open README overclaiming language; create a status language reference doc |
+| Next action | Fix index.html VP surname; fix luminis-foundation-open README overclaiming language; create a status language reference doc |
 
 ---
 
@@ -325,3 +326,32 @@ The planned Step 3 deployment is at the Foundation's office site in Rowe, NM —
 | 14 | AI Agent Workflow | Medium | High | P1 |
 | 15 | Repository Exposure | Low–Med | High | P1 |
 | 16 | Environmental / Field Site | High | Medium | P1 |
+
+---
+
+## Evidence Confidence
+
+### Key
+
+| Symbol | Meaning |
+|---|---|
+| ✅ Pub | Confirmed from public repository files |
+| 📋 Legal | Confirmed from legal/state records (private) |
+| 🗣️ Founder | Stated or confirmed by the founder |
+| ⚠️ Conflict | Conflicted — multiple sources give different information |
+| ❓ Unknown | Missing or not verifiable from available public sources |
+
+### Assessment
+
+| Risk Claim | Confidence | Source |
+|---|---|---|
+| NM incorporation complete; entity in good standing | ✅ Pub | `governance/mission.md`, `governance/milestones.md` |
+| 501(c)(3) applied for; determination pending | ✅ Pub | `governance/milestones.md`; website |
+| Banking not yet established | 🗣️ Founder | Open item in `governance/roadmap.md`; confirmed pending |
+| VP legal name is "VanKaujk" | 🗣️ Founder | Confirmed by founder; contradicted by website source |
+| Website has VP surname error ("VanKuijk") | ⚠️ Conflict | `luminis-foundation.github.io/index.html` vs founder confirmation |
+| luminis-foundation-open README overclaims field deployment | ✅ Pub | `luminis-foundation-open/README.md` |
+| VITE_PI_TOKEN risk (not currently set in Vercel) | ❓ Unknown | Risk is documented in SECURITY.md; current Vercel env var state unconfirmed |
+| No validated public field dataset | ✅ Pub | `research/datasets/` empty; `mycosense/FIELD_STATUS.md` |
+| No board minutes in public repo | ✅ Pub | `governance/board-minutes/` empty in this repo |
+| No financial controls policy documented | ✅ Pub | No such document found in any public repo |
