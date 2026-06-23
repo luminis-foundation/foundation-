@@ -126,7 +126,7 @@ Once funding is secured and equipment is procured:
 1. Confirm electrode model and ADC board model with Carlos Garcia
 2. Procure reference signal equipment, reference electrodes, and environmental logger
 3. Complete pre-deployment calibration steps 1–5 with all nodes
-4. Record all calibration data in `research/data/calibration-records/`
+4. Record all calibration data in private operational records controlled by authorized Foundation officers/researchers. A public-safe summary may be committed later if appropriate, but raw calibration records should not be committed to the public repository.
 5. Replace all placeholder thresholds with empirically derived values
 6. Conduct field calibration check during Step 3 deployment
 7. Review pilot dataset against calibration baseline
@@ -142,7 +142,7 @@ A calibration session will be considered complete when:
 - [ ] All ADC channels verified against reference signal within confirmed tolerance
 - [ ] All electrodes pass contact resistance check
 - [ ] Noise floor measurement recorded and within confirmed ceiling
-- [ ] Calibration records committed to `research/data/calibration-records/` with session ID and timestamp
+- [ ] Calibration records retained privately with session ID and timestamp
 - [ ] Carlos Garcia or designated researcher has reviewed and approved the calibration record
 
 ---
