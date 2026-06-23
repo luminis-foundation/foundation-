@@ -10,7 +10,7 @@
 ## Top 10 Risks to Address First
 
 | Rank | Risk | Likelihood | Impact | Category |
-|---|---|---|---|---|
+|---|---|---|---|
 | 1 | **Founder single point of failure** | High | Critical | Governance / Operations |
 | 2 | **501(c)(3) application denial or delay** | Medium | High | Legal / Compliance |
 | 3 | **Banking pending / needs board-authorized completion** | High | High | Finance / Operations |
@@ -54,7 +54,7 @@ The Foundation filed Form 1023-EZ (the simplified exemption application) on June
 | Missing controls | No backup plan if IRS requests Form 1023 (full) or additional information |
 | Mitigation | Monitor IRS correspondence; ensure activities match stated charitable purpose; do not take on unrelated business income; consult nonprofit attorney if IRS responds with questions |
 | Owner | Carlos Garcia |
-| Next action | Track IRS correspondence; note that 1023-EZ approval typically takes 1–3 months; prepare for possible IRS questions about private benefit and research methodology |
+| Next action | Track IRS correspondence; prepare for possible IRS questions about private benefit and research methodology |
 
 ---
 
@@ -71,7 +71,7 @@ The Foundation has a 4-person board with no documented meeting cadence, no board
 | Missing controls | Meeting minutes; annual meeting cadence; financial oversight procedures; independent director(s) |
 | Mitigation | Hold quarterly board meetings; document minutes privately; store offline or in private repo; add at least one independent director when possible |
 | Owner | Guillermo Martin (Secretary) |
-| Next action | Document organizational meeting minutes; schedule Q3 2026 board meeting; draft financial oversight procedures |
+| Next action | Confirm signed organizational meeting minutes are retained as a private record; create a public-safe index or template if desired; schedule Q3 2026 board meeting; draft financial oversight procedures |
 
 ---
 
@@ -169,7 +169,7 @@ No real field data exists yet. When it does, data quality risks include: uncalib
 
 **Description:**
 Known technical security limitations documented in SECURITY.md and FIELD_DEPLOYMENT_SECURITY.md:
-- Pi server has no TLS — suitable for trusted LAN only; if accidentally port-forwarded, unauthenticated access to sensor data
+- Pi server has no TLS — suitable for trusted LAN only; bearer token authentication is present but tokens transmit in cleartext if the server is accidentally port-forwarded
 - MQTT messages are not signed — LAN devices can inject fake readings
 - No replay protection on MQTT
 - `VITE_PI_TOKEN` embedded in browser bundle at Vercel build time if ever set — token visible in public JS

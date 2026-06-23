@@ -25,7 +25,7 @@
 
 | Priority | Action | Owner | Effort | Reason | Acceptance Criteria |
 |---|---|---|---|---|---|
-| P0 | Document organizational meeting minutes | Guillermo Martin | Small | Confirms bylaws adoption, officer elections — foundational governance record | Minutes drafted and stored privately (not in public repo) |
+| P0 | Confirm signed organizational meeting minutes are retained as a private record; create a public-safe index or template if desired | Guillermo Martin | Small | Confirms bylaws adoption, officer elections — foundational governance record | Signed copy confirmed retained privately; public-safe index or template created if desired |
 | P0 | Fix VP surname in Foundation website source: luminis-foundation.github.io/index.html — change "VanKuijk" → "VanKaujk" | Carlos Garcia | Small | P0 error: founder has confirmed legal name is "VanKaujk"; website has incorrect "VanKuijk"; funder due diligence will catch this | PR merged to luminis-foundation.github.io; website displays "VanKaujk" |
 | P1 | Verify Zenodo preprint VP author name spelling; request Zenodo correction if listed as "VanKuijk" | Carlos Garcia | Small | Author record must align with confirmed legal name | Zenodo record checked; correction request submitted if needed |
 | P1 | Schedule Q3 2026 board meeting | Carlos Garcia | Small | Governance cadence; review foundation status, research plan, budget | Board meeting held; minutes recorded |
