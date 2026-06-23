@@ -20,12 +20,10 @@ Maintained by the Board of Directors. Add new entries only after an event is con
 - **May 7** — Initial Report filed with the New Mexico Secretary of State (added Sterling J. VanKaujk, Vice President).
 - **May 12** — Foundational research synthesis published on Zenodo: *Bridging Mycelium-Inspired Decentralized Computing and Symbiotic Plant–Fungal–AI Bio-Hybrid Systems in Northern New Mexico's High-Desert Ecosystems* (DOI: 10.5281/zenodo.20143391, CC-BY-4.0).
 - **Jun 9** — Form 1023-EZ (Application for Recognition of Exemption under §501(c)(3)) submitted to the IRS; $275 user fee paid (settled Jun 10).
-- **[date]** — MycoSense dashboard deployed at mycosense.vercel.app (React; runs on simulated sensor data — no live field hardware yet).
-
-### To confirm before publishing
-<!-- Verify date/details from your own records, then move each item up to "Confirmed." -->
-- **[verify]** — First external grant application submitted (Awesome Foundation, Conservation & Climate; $1,000; project MycoSense).
-- **[verify]** — Public organization website live (note: confirm whether this is separate from mycosense.vercel.app).
+- **Jun 9** — Public Foundation website live at `luminisfoundationresearch.org`; HTTPS provisioned and core content verified.
+- **Jun 9** — MycoSense initial software scaffold pushed to GitHub at `luminis-foundation/mycosense`.
+- **Jun 10** — MycoSense public demo deployment path configured on Vercel at `mycosense.vercel.app`; live demo link added to the Foundation website.
+- **Jun 10** — Awesome Foundation Conservation & Climate microgrant application submitted for MycoSense.
 
 ### Pending
 - IRS §501(c)(3) determination letter
